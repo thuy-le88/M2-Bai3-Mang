@@ -17,19 +17,21 @@ public class DeleteElementInArray {
         for (int j = 0; j < array.length; j++) {
             System.out.print(array[j] + "\t");
         }
+        System.out.println();
         int x;
-        System.out.println("Enter a number to be deleted if have: ");
+        System.out.print("Enter a number to be deleted if have: ");
         x=sc.nextInt();
-        for (int k=0;k<array.length;k++) {
-            if (x!=array[k]) {
-                array[k]=array[k];
-            }
-            else {
-                array[k]=array[k+1];
+        int c;
+        for (c = i = 0; i < size; i++) {
+            if (array[i] != x) {
+                array[c] = array[i];
+                c++;
             }
         }
+
+        size = c;
         System.out.printf("%-20s%s", "New array: ", "");
-        for (int j = 0; j < array.length; j++) {
+        for (int j = 0; j < size; j++) {
             System.out.print(array[j] + "\t");
         }
     }
