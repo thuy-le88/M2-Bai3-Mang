@@ -26,7 +26,7 @@ public class SumOfColumn {
         }
         System.out.println("Enter column no. which would be summarized:");
         int column=sc.nextInt();
-        int sum=0;
+        double sum=0;
         for (int k=0;k<row;k++) {
             sum+=array[k][column];
         }
